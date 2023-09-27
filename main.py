@@ -1,12 +1,13 @@
 from flask import Flask , render_template
 import datetime
 app = Flask(__name__)
-User = ["Tanmay" , "Sita" ,"Gita" ,"Chalita" ,"Lata"]
-
+User = ["Tanmay"]
+secUser = ["Sita" ,"Gita" ,"Chalita" ,"Lata"]
 @app.route('/')
 def index():
   N = User
-  return render_template("index.html" , N=N)
+  sn = secUser
+  return render_template("index.html" , N=N, sN=sn)
 @app.route('/base')
 def base():
   return render_template("base.html")
